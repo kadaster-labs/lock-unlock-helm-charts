@@ -1,0 +1,27 @@
+image:
+  repository: lock-unlock/rewrite
+  pullPolicy: Never
+  tag: "0.1.0"
+
+dataloader:
+  repository: lock-unlock/dataloader
+  pullPolicy: Never
+  tag: "0.1.0"
+
+  dataset:
+    file_url: "https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/lock-unlock-brk.ttl.gz"
+    endpoint: "/brk"
+
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - host: fuseki.127.0.0.1.nip.io
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+          backend:
+            service:
+              name: fuseki
+              port:
+                number: 80
