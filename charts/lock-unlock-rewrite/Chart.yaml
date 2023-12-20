@@ -1,13 +1,13 @@
 apiVersion: v2
 appVersion: "0.1.0"
-description: Helm charts for the Fuseki deployment of Lock-Unlock
+description: Helm charts for the Fuseki deployment of Lock-Unlock with Rewrite strategy
 home: https://labs.kadaster.nl/cases/lockunlock
 keywords:
   - lock-unlock
   - digilab
   - kadaster-labs
-name: lock-unlock-fuseki
+name: lock-unlock-rewrite
 sources:
-  - https://github.com/kadaster-labs/lock-unlock-testdata-fuseki
+  - https://github.com/kadaster-labs/secured-sparql-endpoint-rewrite
 type: application
 version: 0.1.0
