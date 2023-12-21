@@ -59,6 +59,16 @@ You can then access http://$DATASET.127.0.0.1.nip.io/
 
 Acceptable values DATASET currently are: `anbi`, `brk`, `brp` and `nhr`.
 
+## Using these Charts externally example
+```bash
+helm repo add lock-unlock https://kadaster-labs.github.io/lock-unlock-helm-charts/
+helm repo update
+
+helm upgrade --install sse-rewrite lock-unlock/lock-unlock-rewrite \
+  --values examples/lock-unlock-rewrite/values.localhost.yaml \
+  --namespace lock-unlock --create-namespace
+```
+
 ## License
 
 Licensed under [EUPL-1.2](LICENSE.md)
