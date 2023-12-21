@@ -1,5 +1,15 @@
 # Deploy using Helm Charts
 
+Other relevant repositories of the [Lock-Unlock Project](https://labs.kadaster.nl/cases/lockunlock) are:
+
+- [Lock-Unlock Onthologies](https://github.com/kadaster-labs/lock-unlock-onthologies)
+  - Authorization Onthology (in research)
+  - Logging Onthology (in research)
+- [Lock-Unlock Testdata](https://github.com/kadaster-labs/lock-unlock-testdata)
+- [Secured SPARQL Endpoint Sub Graph](https://github.com/kadaster-labs/secured-sparql-endpoint) (based on Apache Jena & SpringBoot)
+- [Secured SPARQL Endpoint Rewrite (SPARQL Query)](https://github.com/kadaster-labs/secured-sparql-endpoint-rewrite) (based on Fuseki)
+- (this repo) [Lock-Unlock Helm Charts](https://github.com/kadaster-labs/lock-unlock-helm-charts)
+
 ## Test on a local Docker Desktop Kubernetes environment:
 For IngressController (to access the Fuseki endpoint in the browser), install something like [ingress-nginx](https://kubernetes.github.io/ingress-nginx/).
 ```bash
@@ -48,3 +58,7 @@ helm upgrade --install fuseki-$DATASET charts/lock-unlock-rewrite \
 You can then access http://$DATASET.127.0.0.1.nip.io/
 
 Acceptable values DATASET currently are: `anbi`, `brk`, `brp` and `nhr`.
+
+## License
+
+Licensed under [EUPL-1.2](LICENSE.md)
