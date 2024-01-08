@@ -43,7 +43,11 @@ helm upgrade [RELEASE_NAME] [CHART] --install
 ## Configuration
 To see all configurable options with detailed comments, visit the chart's values.yaml, or run these configuration commands:
 
+```console
 helm show values lock-unlock/lock-unlock-rewrite
+```
+
+It is required to either set the imagePullSecrets, or build the images yourself and supply your own container registry.
 
 ### Dataloader
 The [dataloader](https://github.com/kadaster-labs/lock-unlock-testdata/tree/main/lock-unlock-dataloader) runs as an initContainer, during which it prepares the Fuseki database.
