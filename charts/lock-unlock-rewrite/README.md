@@ -48,10 +48,9 @@ helm show values lock-unlock/lock-unlock-rewrite
 ### Dataloader
 The [dataloader](https://github.com/kadaster-labs/lock-unlock-testdata/tree/main/lock-unlock-dataloader) runs as an initContainer, during which it prepares the Fuseki database.
 
-> [!IMPORTANT]
-> The `dataloader.dataset.file_url` setting is required in order for this deployment to function. It does not work without supplying dataset to host.
+The `dataloader.dataset.file_url` setting sets the dataset to load. The deployment does not work without supplying a dataset. It needs to be a .ttl file, which may be gzipped.
 
-An example location for a dataset is https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-$DATASET/lock-unlock-$DATASET.ttl.gz, where acceptable values for DATASET are: `anbi`, `brk`, `brp` and `nhr`.
+Default dataset is https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/lock-unlock-brk.ttl.gz. Other acceptable values for are: `anbi`, `brp` and `nhr`.
 
 ### Resources
 The Java VM requires at least 2Gi of memory to function properly, so you might want to set the image to have the following resources:
