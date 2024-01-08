@@ -22,7 +22,12 @@ dataloader:
     file_url: "https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/lock-unlock-brk.ttl.gz"
     endpoint: "/brk"
 
-  resources: {}
+  resources:
+    limits:
+      memory: 2Gi
+    requests:
+      cpu: 1
+      memory: 2Gi
 
 
 imagePullSecrets: []
@@ -67,7 +72,12 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources: {}
+resources:
+  limits:
+    memory: 2Gi
+  requests:
+    cpu: 50m
+    memory: 2Gi
 
 autoscaling:
   enabled: false

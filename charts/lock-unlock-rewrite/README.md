@@ -57,18 +57,7 @@ The `dataloader.dataset.file_url` setting sets the dataset to load. The deployme
 Default dataset is https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/lock-unlock-brk.ttl.gz. Other acceptable values for are: `anbi`, `brp` and `nhr`.
 
 ### Resources
-The Java VM requires at least 2Gi of memory to function properly, so you might want to set the image to have the following resources:
-
-```yaml
-resources:
-  limits:
-    memory: 2Gi
-  requests:
-    cpu: 50m
-    memory: 2Gi
-```
-
-Adjust as desired.
+The Java VM requires at least 2Gi of memory to function properly, so the Helm deployment uses this as default. You may change this value as desired.
 
 ## Values
 
@@ -80,8 +69,9 @@ Adjust as desired.
 | dataloader.image.pullPolicy | string | `"IfNotPresent"` |  |
 | dataloader.image.repository | string | `"lockunlock.azurecr.io/dataloader"` |  |
 | dataloader.image.tag | string | `"0.1.0"` |  |
-| dataloader.resources | object | `{}` |  |
-| fullnameOverride | string | `""` |  |
+| dataloader.resources.limits.memory | string | `"2Gi"` |  |
+| dataloader.resources.requests.cpu | int | `1` |  |
+| dataloader.resources.requests.memory | string | `"2Gi"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"lockunlock.azurecr.io/rewrite"` |  |
 | image.tag | string | `"0.1.0"` |  |
@@ -93,20 +83,7 @@ Adjust as desired.
 | ingress.hosts[0].paths[0].path | string | `"/"` |  |
 | ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
 | ingress.tls | list | `[]` |  |
-| nameOverride | string | `""` |  |
-| nodeSelector | object | `{}` |  |
-| podAnnotations | object | `{}` |  |
-| podLabels | object | `{}` |  |
-| podSecurityContext | object | `{}` |  |
 | replicaCount | int | `1` |  |
-| resources | object | `{}` |  |
-| securityContext | object | `{}` |  |
-| service.port | int | `80` |  |
-| service.type | string | `"ClusterIP"` |  |
-| serviceAccount.annotations | object | `{}` |  |
-| serviceAccount.automount | bool | `true` |  |
-| serviceAccount.create | bool | `true` |  |
-| serviceAccount.name | string   || `""` |  |
-| tolerations | list | `[]` |  |
-| volumeMounts | list | `[]` |  |
-| volumes | list | `[]` |  |
+| resources.limits.memory | string | `"2Gi"` |  |
+| resources.requests.cpu | string | `"50m"` |  |
+| resources.requests.memory | string | `"2Gi"` |  |
