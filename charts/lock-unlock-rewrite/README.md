@@ -69,40 +69,41 @@ Adjust as desired.
 
 ## Values
 
-| Key | Type | Default |
-|-----|------|---------|
-| dataloader.dataset.endpoint | string | `"/ds"` |
-| dataloader.dataset.file_url | string | `""` |
-| dataloader.enabled | bool | `true` |
-| dataloader.repository | string | `""` |
-| dataloader.resources | object | `{}` |
-| dataloader.tag | string | `""` |
-| fullnameOverride | string | `""` |
-| image.pullPolicy | string | `"IfNotPresent"` |
-| image.repository | string | `""` |
-| image.tag | string | `""` |
-| imagePullSecrets | list | `[]` |
-| ingress.annotations | object | `{}` |
-| ingress.className | string | `""` |
-| ingress.enabled | bool | `false` |
-| ingress.hosts[0].host | string | `"chart-example.local"` |
-| ingress.hosts[0].paths[0].path | string | `"/"` |
-| ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |
-| ingress.tls | list | `[]` |
-| nameOverride | string | `""` |
-| nodeSelector | object | `{}` |
-| podAnnotations | object | `{}` |
-| podLabels | object | `{}` |
-| podSecurityContext | object | `{}` |
-| replicaCount | int | `1` |
-| resources | object | `{}` |
-| securityContext | object | `{}` |
-| service.port | int | `80` |
-| service.type | string | `"ClusterIP"` |
-| serviceAccount.annotations | object | `{}` |
-| serviceAccount.automount | bool | `true` |
-| serviceAccount.create | bool | `true` |
-| serviceAccount.name | string | `""` |
-| tolerations | list | `[]` |
-| volumeMounts | list | `[]` |
-| volumes | list | `[]` |
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| dataloader.dataset.endpoint | string | `"/brk"` |  |
+| dataloader.dataset.file_url | string | `"https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/lock-unlock-brk.ttl.gz"` |  |
+| dataloader.enabled | bool | `true` |  |
+| dataloader.image.pullPolicy | string | `"IfNotPresent"` |  |
+| dataloader.image.repository | string | `"lockunlock.azurecr.io/dataloader"` |  |
+| dataloader.image.tag | string | `"0.1.0"` |  |
+| dataloader.resources | object | `{}` |  |
+| fullnameOverride | string | `""` |  |
+| image.pullPolicy | string | `"IfNotPresent"` |  |
+| image.repository | string | `"lockunlock.azurecr.io/rewrite"` |  |
+| image.tag | string | `"0.1.0"` |  |
+| imagePullSecrets | list | `[]` |  |
+| ingress.annotations | object | `{}` |  |
+| ingress.className | string | `""` |  |
+| ingress.enabled | bool | `false` |  |
+| ingress.hosts[0].host | string | `"chart-example.local"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
+| ingress.tls | list | `[]` |  |
+| nameOverride | string | `""` |  |
+| nodeSelector | object | `{}` |  |
+| podAnnotations | object | `{}` |  |
+| podLabels | object | `{}` |  |
+| podSecurityContext | object | `{}` |  |
+| replicaCount | int | `1` |  |
+| resources | object | `{}` |  |
+| securityContext | object | `{}` |  |
+| service.port | int | `80` |  |
+| service.type | string | `"ClusterIP"` |  |
+| serviceAccount.annotations | object | `{}` |  |
+| serviceAccount.automount | bool | `true` |  |
+| serviceAccount.create | bool | `true` |  |
+| serviceAccount.name | string   || `""` |  |
+| tolerations | list | `[]` |  |
+| volumeMounts | list | `[]` |  |
+| volumes | list | `[]` |  |
