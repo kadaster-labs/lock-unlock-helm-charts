@@ -5,20 +5,22 @@
 replicaCount: 1
 
 image:
-  repository: ""
+  repository: lockunlock.azurecr.io/rewrite
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "0.1.0"
 
 dataloader:
   enabled: true
 
-  repository: ""
-  tag: ""
+  image:
+    repository: lockunlock.azurecr.io/dataloader
+    tag: "0.1.0"
+    pullPolicy: IfNotPresent
 
   dataset:
-    file_url: ""
-    endpoint: "/ds"
+    file_url: "https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/lock-unlock-brk.ttl.gz"
+    endpoint: "/brk"
 
   resources: {}
 

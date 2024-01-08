@@ -4,9 +4,10 @@ image:
   tag: "0.1.0"
 
 dataloader:
-  repository: lock-unlock/dataloader
-  pullPolicy: Never
-  tag: "0.1.0"
+  image:
+    repository: lock-unlock/dataloader
+    pullPolicy: Never
+    tag: "0.1.0"
 
   dataset:
     file_url: "https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/lock-unlock-brk.ttl.gz"
