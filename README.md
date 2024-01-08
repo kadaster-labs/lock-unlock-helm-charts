@@ -11,7 +11,7 @@ Other relevant repositories of the [Lock-Unlock Project](https://labs.kadaster.n
 - (this repo) [Lock-Unlock Helm Charts](https://github.com/kadaster-labs/lock-unlock-helm-charts)
 
 ## Helm charts
-- [Rewrite (SPARQL Query)](https://github.com/kadaster-labs/lock-unlock-helm-charts/charts/lock-unlock-rewrite)
+- Rewrite SPARQL Queries strategy [lock-unlock-rewrite](https://github.com/kadaster-labs/lock-unlock-helm-charts/tree/main/charts/lock-unlock-rewrite)
 
 
 ## Running locally
