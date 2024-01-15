@@ -56,6 +56,8 @@ spec:
           env:
             - name: FUSEKI_BASE
               value: /run
+            - name: JAVA_OPTIONS
+              value: "{{ .Values.javaOptions }}"
           ports:
             - name: http
               containerPort: 3030

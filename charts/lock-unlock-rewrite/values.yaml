@@ -74,10 +74,12 @@ ingress:
 
 resources:
   limits:
-    memory: 2Gi
+    memory: 16Gi
   requests:
     cpu: 50m
     memory: 2Gi
+
+javaOptions: "-Xmx16g -Xms4g"
 
 autoscaling:
   enabled: false
