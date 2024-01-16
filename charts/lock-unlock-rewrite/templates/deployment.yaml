@@ -57,7 +57,7 @@ spec:
             - name: FUSEKI_BASE
               value: /run
             - name: JAVA_OPTIONS
-              value: "{{ .Values.javaOptions }}"
+              value: "{{ .Values.image.javaOptions }}"
           ports:
             - name: http
               containerPort: 3030
@@ -70,7 +70,7 @@ spec:
             - name: fuseki-base
               mountPath: /run
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+            {{- toYaml .Values.image.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}

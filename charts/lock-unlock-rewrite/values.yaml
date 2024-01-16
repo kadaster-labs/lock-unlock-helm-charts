@@ -9,6 +9,15 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "0.1.0"
+  
+  resources:
+    limits:
+      memory: 16Gi
+    requests:
+      cpu: 50m
+      memory: 2Gi
+  
+  javaOptions: "-Xmx16g -Xms4g"
 
 dataloader:
   enabled: true
@@ -71,15 +80,6 @@ ingress:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
-
-resources:
-  limits:
-    memory: 16Gi
-  requests:
-    cpu: 50m
-    memory: 2Gi
-
-javaOptions: "-Xmx16g -Xms4g"
 
 autoscaling:
   enabled: false
