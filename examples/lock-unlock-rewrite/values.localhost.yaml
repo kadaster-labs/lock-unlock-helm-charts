@@ -10,7 +10,7 @@ dataloader:
     tag: "0.1.0"
 
   dataset:
-    file_url: "https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/lock-unlock-brk.ttl.gz"
+    file_url: "https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/data.zip"
     endpoint: "/brk"
 
 ingress:

@@ -34,7 +34,7 @@ helm upgrade --install fuseki-$DATASET charts/lock-unlock-rewrite \
   --namespace lock-unlock-$DATASET --create-namespace \
   --values examples/lock-unlock-rewrite/values.localhost.yaml \
   --set ingress.hosts\[0\].host=$DATASET.127.0.0.1.nip.io \
-  --set dataloader.dataset.file_url="https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-$DATASET/lock-unlock-$DATASET.ttl.gz" \
+  --set dataloader.dataset.file_url="https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-$DATASET/data.zip" \
   --set dataloader.dataset.endpoint="/$DATASET"
 ```
 
