@@ -8,23 +8,23 @@ image:
   repository: lockunlock.azurecr.io/rewrite
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.1.0"
+  tag: "0.1.1"
   
   resources:
     limits:
-      memory: 16Gi
+      memory: 8Gi
     requests:
       cpu: 50m
       memory: 2Gi
   
-  javaOptions: "-Xmx16g -Xms4g"
+  javaOptions: "-Xmx8g -Xms4g"
 
 dataloader:
   enabled: true
 
   image:
     repository: lockunlock.azurecr.io/dataloader
-    tag: "0.1.0"
+    tag: "0.1.1"
     pullPolicy: IfNotPresent
 
   dataset:
