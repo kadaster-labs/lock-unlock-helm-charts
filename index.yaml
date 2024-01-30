@@ -20,6 +20,24 @@ entries:
     version: 0.1.0
   lock-unlock-rewrite:
   - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2024-01-30T10:23:59.447466008Z"
+    description: Helm charts for the Fuseki deployment of Lock-Unlock with Rewrite
+      strategy
+    digest: ad89ccbc8285349137e7a48cfc409c8ba1f23d30466049389a4a6d44663162c2
+    home: https://labs.kadaster.nl/cases/lockunlock
+    keywords:
+    - lock-unlock
+    - digilab
+    - kadaster-labs
+    name: lock-unlock-rewrite
+    sources:
+    - https://github.com/kadaster-labs/secured-sparql-endpoint-rewrite
+    type: application
+    urls:
+    - https://github.com/kadaster-labs/lock-unlock-helm-charts/releases/download/lock-unlock-rewrite-0.1.5/lock-unlock-rewrite-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2024-01-16T15:02:28.166289481Z"
     description: Helm charts for the Fuseki deployment of Lock-Unlock with Rewrite
@@ -109,4 +127,4 @@ entries:
     urls:
     - https://github.com/kadaster-labs/lock-unlock-helm-charts/releases/download/lock-unlock-rewrite-0.1.0/lock-unlock-rewrite-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-16T15:02:28.166314448Z"
+generated: "2024-01-30T10:23:59.447504051Z"
