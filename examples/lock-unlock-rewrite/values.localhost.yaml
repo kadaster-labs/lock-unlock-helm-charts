@@ -1,16 +1,16 @@
 image:
   repository: lock-unlock/rewrite
   pullPolicy: Never
-  tag: "0.1.0"
+  tag: "0.1.1"
 
 dataloader:
   image:
     repository: lock-unlock/dataloader
     pullPolicy: Never
-    tag: "0.1.0"
+    tag: "0.1.1"
 
   dataset:
-    file_url: "https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/lock-unlock-brk.ttl.gz"
+    file_url: "https://raw.githubusercontent.com/kadaster-labs/lock-unlock-testdata/main/testdata-brk/data.zip"
     endpoint: "/brk"
 
 ingress:
