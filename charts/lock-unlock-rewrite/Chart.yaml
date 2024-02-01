@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: "0.1.2"
+appVersion: "0.1.3"
 description: Helm charts for the Fuseki deployment of Lock-Unlock with Rewrite strategy
 home: https://labs.kadaster.nl/cases/lockunlock
 keywords:
