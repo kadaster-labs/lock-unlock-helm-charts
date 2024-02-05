@@ -52,7 +52,7 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          args: [ "--tdb2", "--loc", "/database", "{{ .Values.dataloader.dataset.endpoint }}" ]
+          args: [ "--tdb2", "--update", "--loc", "/database", "{{ .Values.dataloader.dataset.endpoint }}" ]
           env:
             - name: FUSEKI_BASE
               value: /run
