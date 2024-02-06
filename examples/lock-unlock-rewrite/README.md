@@ -10,7 +10,7 @@ helm upgrade --install ingress-nginx ingress-nginx  \
 The next step assumes you've built the [lock-unlock-rewrite](https://github.com/kadaster-labs/secured-sparql-endpoint-rewrite) and [lock-unlock-dataloader](https://github.com/kadaster-labs/lock-unlock-testdata/tree/main/lock-unlock-dataloader) images in their corresponding repos, as a reminder:
 ```console
 # cd secured-sparql-endpoint-rewrite
-docker build --build-arg JENA_VERSION=4.10.0 --build-arg LOCK_UNLOCK_VERSION=0.1.4 -t lock-unlock/rewrite:0.1.4 -f docker/Dockerfile .
+docker build --build-arg JENA_VERSION=4.10.0 --build-arg LOCK_UNLOCK_VERSION=0.1.5 -t lock-unlock/rewrite:0.1.5 -f docker/Dockerfile .
 
 # cd lock-unlock-testdata
 docker build -t lock-unlock/dataloader:0.1.1 ./lock-unlock-dataloader
