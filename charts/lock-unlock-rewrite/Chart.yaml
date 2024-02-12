@@ -10,4 +10,4 @@ name: lock-unlock-rewrite
 sources:
   - https://github.com/kadaster-labs/secured-sparql-endpoint-rewrite
 type: application
-version: 0.1.12
+version: 0.1.13
