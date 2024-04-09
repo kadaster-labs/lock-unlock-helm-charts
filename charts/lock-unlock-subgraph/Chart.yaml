@@ -1,0 +1,12 @@
+apiVersion: v2
+appVersion: "0.0.1"
+description: Helm charts for the Jena deployment of Lock-Unlock with Subgraph strategy
+home: https://labs.kadaster.nl/cases/lockunlock
+keywords:
+  - lock-unlock
+  - kadaster-labs
+name: lock-unlock-subgraph
+sources:
+  - https://github.com/kadaster-labs/secured-sparql-endpoint-subgraph
+type: application
+version: 0.1.0
