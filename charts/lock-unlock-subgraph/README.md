@@ -56,18 +56,21 @@ The Java VM requires at least 2Gi of memory to function properly, so the Helm de
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| autoscaling.enabled | bool | `false` |  |
+| autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
+| image.javaOptions | string | `"-Xmx8g -Xms4g"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"lockunlock.azurecr.io/subgraph"` |  |
-| image.tag | string | `"0.1.1"` |  |
-| imagePullSecrets | list | `[]` |  |
-| ingress.annotations | object | `{}` |  |
-| ingress.className | string | `""` |  |
+| image.resources.limits.memory | string | `"8Gi"` |  |
+| image.resources.requests.cpu | string | `"50m"` |  |
+| image.resources.requests.memory | string | `"2Gi"` |  |
+| image.tag | string | `"0.0.1"` |  |
 | ingress.enabled | bool | `false` |  |
 | ingress.hosts[0].host | string | `"chart-example.local"` |  |
 | ingress.hosts[0].paths[0].path | string | `"/"` |  |
 | ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
-| ingress.tls | list | `[]` |  |
 | replicaCount | int | `1` |  |
-| resources.limits.memory | string | `"8Gi"` |  |
-| resources.requests.cpu | string | `"50m"` |  |
-| resources.requests.memory | string | `"2Gi"` |  |
+| service.port | int | `80` |  |
+| service.type | string | `"ClusterIP"` |  |
+| serviceAccount.automount | bool | `true` |  |
+| serviceAccount.create | bool | `true` |  |
