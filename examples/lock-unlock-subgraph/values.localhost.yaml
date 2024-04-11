@@ -1,0 +1,18 @@
+image:
+  repository: lock-unlock/subgraph
+  pullPolicy: Never
+  tag: "0.0.1"
+
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - host: subgraph.127.0.0.1.nip.io
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+          backend:
+            service:
+              name: subgraph
+              port:
+                number: 80
