@@ -17,7 +17,7 @@ image:
       cpu: 50m
       memory: 2Gi
   
-  javaOptions: "-Xmx8g -Xms4g"
+  javaOptions: "-Xmx7g -Xms4g"
 
 imagePullSecrets: []
 nameOverride: ""
